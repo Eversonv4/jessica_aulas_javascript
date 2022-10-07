@@ -7,18 +7,37 @@
     <title>Document</title>
 
     <style>
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
       body {
-        font-family: "Tahoma", sans-serif;
-        background-color: #017ba3;
+        font-family: "Roboto", sans-serif;
+        background-color: #25258b;
         color: white;
       }
 
       li {
         margin-bottom: 20px;
       }
+
+      .back-to-menu-btn {
+        border: 1px solid white;
+        width: fit-content;
+        color: white;
+        padding: 5px 10px;
+        margin: 0;
+        background-color: #44dd77;
+        position: fixed;
+        top: 10px;
+        right: 30px;
+      }
     </style>
   </head>
   <body>
+    <h3 class="back-to-menu-btn">
+      <a href="../index.html">Voltar ao menu de aulas</a>
+    </h3>
     <h2>Importando um arquivo javascript</h2>
     <p>
       Para utilizar javascript no seu HTML, você pode tanto importar um
@@ -124,6 +143,51 @@
       será alterada? usa CONST. Entendeu?
     </h3>
 
+    <h4>OBS:</h4>
+    <p>
+      Os nomes das variáveis em javascript
+      <strong style="color: yellow">NÂO</strong> podem conter:
+    </p>
+
+    <ol>
+      <li>Espaços</li>
+      <li>Começar por número</li>
+      <li>
+        Conter caracteres especiais como: -, +, ", /, %, (, ), {, }, !, @, #.
+      </li>
+    </ol>
+
+    <h4>Padrões de nomes de variáveis</h4>
+    <p>
+      Esses são alguns padrões comuns utilizados para dar nomes à variáveis com
+      mais de um nome.
+    </p>
+
+    <ol>
+      <li>
+        <h3>Camel case <spam>(forma mais usada em JS)</spam></h3>
+        <p>
+          Primeira letra da primeira palavra minúscula, depois as primeiras
+          letras das outras palavras tudo em maiúsculo
+        </p>
+        <strong>Ex: </strong> inputValue, meuNome, iconClose
+      </li>
+      <li>
+        <h3>Pascal case</h3>
+        <p>A primeira letra das palavras começam todas em maiúsculo.</p>
+        <strong>Ex: </strong> InputValue, MeuNome, IconClose
+      </li>
+
+      <li>
+        <h3>Snake case</h3>
+        <p>
+          As palavras são separadas por "underline" e todas as letras respeitam
+          a mesma formatação, ou todas em maiúsculo, ou todas em minúsculo.
+        </p>
+        <strong>Ex: </strong> input_value, MEU_NOME, icon_close
+      </li>
+    </ol>
+
     <hr />
 
     <h2>Mostrando mensagens em tela (e no terminal)</h2>
@@ -179,15 +243,15 @@
     </ul>
 
     <script>
-      const resultado = confirm("quer ver meus 'conteúdos'?");
+      // const resultado = confirm("quer ver meus 'conteúdos'?");
       // const resposta = prompt("Qual o seu nome?");
       // console.log("Seja bem vindx, " + resposta);
 
-      if (resultado === true) {
-        console.log("Seja bem-vinda, jessica linda!");
-      } else {
-        document.querySelector("body").style.display = "none";
-      }
+      // if (resultado === true) {
+      //   console.log("Seja bem-vinda, jessica linda!");
+      // } else {
+      //   document.querySelector("body").style.display = "none";
+      // }
 
       // console.log(resultado);
     </script>
