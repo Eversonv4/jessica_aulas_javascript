@@ -32,6 +32,34 @@
         top: 10px;
         right: 30px;
       }
+
+      .alert {
+        text-decoration: underline;
+        background-color: yellow;
+        animation: changebg 4s infinite;
+        padding: 20px;
+        line-height: 2;
+      }
+
+      @keyframes changebg {
+        0% {
+          background-color: yellow;
+        }
+        25% {
+          background-color: #10db10;
+        }
+        50% {
+          background-color: #00a6e7;
+        }
+        75% {
+          background-color: #da0528;
+          color: yellow;
+        }
+        100% {
+          background-color: yellow;
+          color: red;
+        }
+      }
     </style>
   </head>
   <body>
@@ -137,7 +165,7 @@
       </li>
     </ul>
 
-    <h3>
+    <h3 class="alert">
       Na dúvida, usa <strong>let</strong> ou <strong>const</strong>. Quer criar
       uma variável que será mutável? usa LET. Quer criar uma variável que não
       será alterada? usa CONST. Entendeu?
