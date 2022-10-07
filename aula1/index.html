@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: "Tahoma", sans-serif;
+        background-color: #017ba3;
+        color: white;
+      }
+
+      li {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Importando um arquivo javascript</h2>
+    <p>
+      Para utilizar javascript no seu HTML, você pode tanto importar um
+      javascript externo com a tag &lt;script&gt; e passando o atributo
+      <i>src</i> e passando como valor o caminho até o seu arquivo.
+    </p>
+    <strong>
+      Ex: <span>&lt;script src="./script" &gt;&lt;/script&gt;</span>
+    </strong>
+    <p>
+      Ou você pode simplesmente escrever o seu script dentro da tag
+      &lt;script&gt;
+    </p>
+
+    <hr />
+
+    <h2>Comentários</h2>
+    <p>
+      O javascript possui duas formas de se escrever comentários. Ok, mas o que
+      são comentários? São textos que apesar de estar dentro do seu código, o
+      compilador ou navegador não irá executar aquele código. Temos comentários
+      de uma linha só, e comentários de mais de uma linha. As duas formas são:
+    </p>
+
+    <ul>
+      <li>
+        <strong>1 Linha: </strong> (duas barras) <br />
+        <span>// seu comentário vai aqui</span>
+      </li>
+      <li>
+        <strong>Múltiplas linhas: </strong> (barra asterisco asterisco barra)
+        <br />
+        <span>
+          /* Seu comentário vai aqui <br />
+          e aqui <br />
+          e aqui também. tudo o que estiver <br />
+          dentro das barras com asteriscos não será interpretado. */
+        </span>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Variáveis e constantes (<i>let</i>, <i>const</i>, <i>var</i>)</h2>
+    <p>
+      Variáveis são como espaços na memória do computador em que armazenamos
+      informações por tempo de execução. Ok, mas o que isso significa? Significa
+      que durante a execução do seu código, um determinado valor será guardado
+      dentro de uma variável, que você pode entender como uma gaveta onde vc
+      guarda uma o que vc quiser. Porém, esses valores guardados podem ser fixos
+      ou sofrer alterações. Mas não se preocupe, porque isso está diretamente
+      ligado à diferença entre as formas de se declarar uma variável.
+    </p>
+
+    <p>
+      Para declarar uma variável, nós utilizamos uma palavra-reservada. E o que
+      são palavras-reservadas? São palavras reservadas pelo próprio javascript e
+      que elas possuem um significado especifico para a linguagem. Exemplos de
+      palavras reservadas "function", "import", "break", "continue", etc.
+    </p>
+
+    <p>As palavras-reservadas para se declarar uma variável são:</p>
+
+    <ul>
+      <li>
+        <h4>let</h4>
+        <p>
+          Ao declarar uma variável com <i>let</i>, você está querendo dizer que
+          você está passando um valor para ela, porém esse valor pode ser
+          alterado no futuro.
+        </p>
+      </li>
+      <li>
+        <h4>const</h4>
+        <p>
+          Como o próprio nome sugere, ao se criar uma variável com
+          <i>const</i> você está querendo dizer que o valor que vc irá atribuir
+          à ela não será alterado de forma alguma
+        </p>
+      </li>
+      <li>
+        <h4>var</h4>
+
+        <p>
+          Criar uma variável com <i>var</i> não é muito indicado, mas você pode.
+          Mas por que não se deve criar uma variável com "var"?
+        </p>
+
+        <p>
+          Porque ele transforma aquela variável que vc criou, em uma variável
+          global. Ou seja, você pode acessar essa mesma variável em qualquer
+          parte do seu projeto. Mas isso parece bom, não é? Mas não é, você pode
+          terminar atribuindo um novo valor pra ela sem perceber, já que uma
+          variável criada com "var" pode ser alterada, assim como uma variável
+          com "let".
+        </p>
+      </li>
+    </ul>
+
+    <h3>
+      Na dúvida, usa <strong>let</strong> ou <strong>const</strong>. Quer criar
+      uma variável que será mutável? usa LET. Quer criar uma variável que não
+      será alterada? usa CONST. Entendeu?
+    </h3>
+
+    <hr />
+
+    <h2>Mostrando mensagens em tela (e no terminal)</h2>
+
+    <p>
+      Com javascript, nós temos diversas formas de interagir com o usuário e não
+      só enviar informações para eles, como também receber informações do
+      usuário.
+    </p>
+
+    <p>
+      Para enviar mensagens para o usuário, temos algumas formas e cada uma
+      delas possuem um propósito. Vamos aos comandos:
+    </p>
+
+    <ul>
+      <li>
+        <h3>alert()</h3>
+        <p>
+          O "alert" serve para enviar ao usuário alguma mensagem relevante ou
+          apenas um alerta mesmo.
+        </p>
+      </li>
+      <li>
+        <h3>prompt()</h3>
+        <p>
+          O "prompt" ele abre uma caixa de texto no topo da tela assim como no
+          "alert", porém, ele também abre uma caixa de texto para que o usuário
+          insira alguma informação, e nós podemos pegar essa informação e
+          manipulá-la.
+        </p>
+      </li>
+
+      <li>
+        <h3>confirm()</h3>
+        <p>
+          O "confirm" também interage com o usuário, mas ele abre uma caixa de
+          texto com duas opções "OK" ou "Cancelar", que podemos entender como
+          "true" e "false". Com base nesse valores de verdadeiro e falso,
+          podemos apresentar conteúdos diferentes.
+        </p>
+      </li>
+      <li>
+        <h3>console.log()</h3>
+        <p>
+          É um método para mostrar uma mensagem ou qualquer outro tipo de valor
+          no terminal, seja ele do navegador ou do seu próprio prompt de
+          comando. Esse é a única forma de se enviar mensagens em tela que
+          funciona tanto no navegador, quanto no sistema operacional (mas vc
+          precisa ter o node instalado no pc).
+        </p>
+      </li>
+    </ul>
+
+    <script>
+      const resultado = confirm("quer ver meus 'conteúdos'?");
+      // const resposta = prompt("Qual o seu nome?");
+      // console.log("Seja bem vindx, " + resposta);
+
+      if (resultado === true) {
+        console.log("Seja bem-vinda, jessica linda!");
+      } else {
+        document.querySelector("body").style.display = "none";
+      }
+
+      // console.log(resultado);
+    </script>
+  </body>
+</html>
