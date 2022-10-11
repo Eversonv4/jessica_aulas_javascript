@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de Dados</title>
+
+    <style>
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #25258b;
+        color: white;
+      }
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      .back-to-menu-btn {
+        border: 1px solid white;
+        width: fit-content;
+        color: white;
+        padding: 5px 10px;
+        margin: 0;
+        background-color: #01c02a;
+        position: fixed;
+        top: 10px;
+        right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="back-to-menu-btn">
+      <a href="../index.html">Voltar ao menu de aulas</a>
+    </h3>
+
+    <h1>Tipos primitivos de dados em Javascript</h1>
+
+    <h2>String</h2>
+    <p>
+      "string" é um dado valor do tipo caractere, ou seja, uma frase dentro de
+      aspas, sejam aspas simples ou duplas ('', ""). Tudo o que estiver dentro
+      de aspas, para o javascript isso é uma string. E além do mais, existe
+      outra forma de escrever strings utilizando o sinal de cráse (``), com esse
+      sinal de crase vc pode também escrever código javascript dentro dele, mas
+      isso a gente verá depois. Ex:
+    </p>
+
+    <code>
+      <pre>
+         "isso é uma string"
+         'isso também'
+         `e isso`
+      </pre>
+    </code>
+
+    <hr />
+
+    <h2>Number</h2>
+    <p>
+      O tipo número é bastante simples de entender, pois ele possui um valor
+      numérico e sinal, dependendo do seu valor. E com eles, naturalmente
+      podemos fazer operações matemáticas. Coisa que não podemos fazer com
+      strings. Ex:
+    </p>
+
+    <code>
+      <pre>
+         666
+      </pre>
+    </code>
+
+    <h2>Boolean</h2>
+    <p>
+      O tipo boolean é um tipo que possui apenas dois valores, verdadeiro ou
+      falso. Ex:
+    </p>
+
+    <code>
+      <pre>
+         true ou false
+      </pre>
+    </code>
+
+    <h2>undefined</h2>
+    <p>
+      O tipo undefined é quando não temos um valor definido. Também pode ser
+      considerado como "vazio". Geralmente acontece quando uma variável não tem
+      nenhum valor ou alguma função que não retorna nada. É um valor que não foi
+      definido, ou seja, não existe, undefined.
+    </p>
+
+    <code>
+      <pre>
+         undefined
+      </pre>
+    </code>
+
+    <h2>Null</h2>
+    <p>
+      Null acaba se comportando muitas vezes como undefined, mas para o
+      javascript o "null" ele pode ser considerado um objeto. Ele também é
+      considerado um valor inexistente.
+    </p>
+
+    <code>
+      <pre>
+         Null
+      </pre>
+    </code>
+
+    <h2>Object</h2>
+    <p>
+      O tipo object no javascript ele é uma estrutura formada por propriedade e
+      valor. Essas propriedades nós colocamos dentro de chaves. Outro detalhe
+      importante, é que as propriedades dos objetos podem receber quaisquer
+      tipos de valores, qualquer um dos que já vimos acima.
+    </p>
+
+    <code>
+      <pre>
+         const Pessoa = {
+            nome: "jessica",
+            sobrenome: "de oliveira",
+            casada: false,
+            certidaoCasamento: undefined,
+            bichinhosFavoritos: ["Sapos", "Cachorros", "Gato"]
+         }
+      </pre>
+    </code>
+
+    <h2>Arrays</h2>
+    <p>
+      Arrays são nada mais que listas, e nessas listas podemos ter uma lista de
+      absolutamente qualquer coisa. Podem ser uma lista de strings, de numbers,
+      undefined e outros objetos. Podemos tanto ter uma lista de apenas um tipo
+      de elementos, como uma lista de tipos variados e misturados.
+    </p>
+
+    <code>
+      <pre>
+         const ListaDeCompras = ["pipoca", 'nescau', `bolo`, 999, true, undefined, Null]
+      </pre>
+    </code>
+
+    <script>
+      const Comidinha = ["sushi", "sanduiche", "pizza"];
+
+      function generateRandomNumber() {
+        return Math.floor(Math.random() * Comidinha.length);
+      }
+
+      const selectedNumber = generateRandomNumber();
+
+      console.log(Comidinha[selectedNumber]);
+    </script>
+  </body>
+</html>

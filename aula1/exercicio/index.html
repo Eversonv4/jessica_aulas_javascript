@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./" />
   </head>
   <body>
     <style>
@@ -58,23 +59,10 @@
     </header>
 
     <script type="text/javascript">
-      /* 
-            aqui acima na tag <script> como vc está escrevendo o seu javascript dentro da tag, você não
-            precisa usar "type='text/javascript", isso é para quando você vai importar um script externo.
-        */
-
-      /*
-            1 - Usar uma letra como variável não é uma boa prática. Dá para ser mais semantico, por exemplo, se essa variável "a" vai receber o nome do usuário você pode dar a ela o nome de "nomeUsuario". O mesmo vale para o "sobrenome".
-
-            2 - Outro detalhe: é bom preferir o uso de "const" ou "let", não usar "var".
-
-            De resto, está ótimo!
-        */
-
-      var a = prompt("Digite seu nome:", "");
-      var b = prompt("Digite seu sobrenome:");
-      alert("Welcome, " + a + " " + b + "");
-      console.log("Nome Completo: " + a + " " + b + "");
+      const nome = prompt("Digite seu nome:", "");
+      const sobrenome = prompt("Digite seu sobrenome:");
+      alert("Welcome, " + nome + " " + sobrenome);
+      console.log("Nome Completo: " + nome + " " + sobrenome);
     </script>
   </body>
 </html>
