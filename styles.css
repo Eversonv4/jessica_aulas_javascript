@@ -16,6 +16,9 @@ a {
   text-decoration: underline;
   color: white;
 }
+a.disabled {
+  pointer-events: none;
+}
 
 h1 {
   text-align: center;
@@ -35,10 +38,18 @@ ul {
 }
 
 ul li {
-  font-size: 22px;
+  font-size: 16px;
 
   padding: 5px 10px;
 
+  text-align: center;
+}
+ul li a {
+  font-size: 22px;
   background-color: #01c02a;
   border-radius: 6px;
+  padding: inherit;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 15px;
 }

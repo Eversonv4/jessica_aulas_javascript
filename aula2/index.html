@@ -21,6 +21,10 @@
         margin-bottom: 20px;
       }
 
+      p {
+        line-height: 22px;
+      }
+
       .back-to-menu-btn {
         border: 1px solid white;
         width: fit-content;
@@ -147,6 +151,65 @@
       </pre>
     </code>
 
+    <h3>Como acessar os valores das propriedades do nosso objeto?</h3>
+
+    <p>
+      Para acessar os valores do nosso objeto nós utilizamos o nome do nosso
+      objeto, depois colocamos um ponto e em seguida o nome da nossa
+      propriedade. Por exemplo, supondo que no nosso objeto "Pessoa", nós
+      queremos acessar a propriedade "nome":
+    </p>
+
+    <h4>meuObjeto.nome_da_propriedade</h4>
+
+    <code>
+      <pre>
+        console.log(Pessoa.nome)
+        // retorna → <i>"jessica"</i>
+      </pre>
+    </code>
+
+    <p>E se quisermos acessar a propriedade "sobrenome":</p>
+
+    <code>
+      <pre>
+        console.log(Pessoa.sobrenome)
+        // retorna → <i>"de oliveira"</i>
+      </pre>
+    </code>
+
+    <p>
+      Podemos também alterar os valores do nosso objeto utilizando a mesma
+      notação de verificar o valor da propriedade:
+    </p>
+
+    <code>
+      <pre>
+        Pessoa.sobrenome = "Soares"
+        console.log(Pessoa.sobrenome)
+        // retorna → <i>"soares"</i>
+      </pre>
+    </code>
+
+    <p>
+      Além de usar o ponto como uma forma de se alcançar o valor de uma
+      propriedade do nosso objeto, também temos outra forma de buscar o valor de
+      uma propriedade, passando o nome do nosso objeto, depois abre e fecha
+      colchetes, e dentro dos colchetes colocamos o nome da propriedade dentro
+      de aspas
+    </p>
+
+    <h4>meuObjeto["nome_da_propriedade"]</h4>
+
+    <p>Exemplo:</p>
+
+    <code>
+      <pre>
+        console.log(Pessoa["nome"])
+        // retorna → <i>"jessica"</i>
+      </pre>
+    </code>
+
     <hr />
 
     <h2>Arrays</h2>
@@ -171,7 +234,241 @@
       </pre>
     </code>
 
+    <h3>Como acessar os valores das propriedades do nosso objeto?</h3>
+
+    <p>
+      Os arrays são listas e de tal forma, ele utiliza índices para indicar a
+      posição dos seus elementos. Enquanto nos objetos a gente utilizava o nome
+      do nosso objeto, depois um ponto e o nome da propriedade, no caso do
+      array, utilizamos números.
+    </p>
+
+    <p>
+      Esses números que precisamos indicar são referentes a posição daquele
+      elemento na minha lista.
+    </p>
+
+    <h4>Como acessar um elemento dentro do Array?</h4>
+
+    <p>
+      Para acessarmos um elemento específico da nossa lista, nós precisamos
+      passar o seu índice, que é a sua posição no array. Vale ressaltar que o
+      índice é um número inteiro, então nada de colocar string aí dentro,
+      somente números e INTEIROS.
+    </p>
+
+    <h4>meuArray[indice]</h4>
+
+    <p>
+      Podemos observar que a forma de acessar um elemento do array é bem
+      parecido com o que fazemos para acessar uma propriedade de um objeto, mas
+      no caso do array, colocamos números dentro do array, e nos objetos
+      colocamos uma string com o nome da nossa propriedade
+    </p>
+
+    <h4>Em javascript começa a se contar a partir de 0 em diante. Ou seja:</h4>
+
+    <p>
+      Se desejarmos pegar o primeiro elemento do nosso array, temos que
+      escrever:
+    </p>
+
+    <code>
+      <pre>
+        const listaDeCompras = ["leite", "chocolate", "açúcar"]
+        listaDeCompras[0]
+        // retorna → <i>"leite"</i>
+
+        listaDeCompras[1]
+        // retorna → <i>"chocolate"</i>
+
+        listaDeCompras[2]
+        // retorna → <i>"açúcar"</i>
+      </pre>
+    </code>
+
+    <p>
+      E assim por diante. Também podemos adicionar alterar valores e adicionar
+      valores ao nosso Array. Passamos uma posição da nossa lista e atribuimos
+      um valor. Levando em consideração o nosso array "listaDeCompras". Exemplo:
+    </p>
+
+    <code>
+      <pre>
+        listaDeCompras[0] = "suco"
+        console.log(listaDeCompras)
+        // retorna → <i>["suco", "chocolate", "açúcar"]</i>
+      </pre>
+    </code>
+
+    <p>
+      Além de passar um valor novo para um índice que estava preenchido, também
+      podemos passar um valor para um índice que não tinha nada. O nosso array
+      tinha três itens "suco", "chocolate" e "açúcar", ou seja, índices 0, 1 e
+      2, respectivamente. Podemos passar um novo elemento para o índice três,
+      quatro, ou o índice que preferir:
+    </p>
+
+    <code>
+      <pre>
+        listaDeCompras[3] = "pipoca"
+        console.log(listaDeCompras)
+        // retorna → <i>["suco", "chocolate", "açúcar", "pipoca"]</i>
+      </pre>
+    </code>
+
+    <p>
+      Agora vamos atribuir um novo elemento para um índice vazio, vamos tentar
+      colocar um elemento num índice 5. Os índices 0, 1, 2, 3 já estão ocupados,
+      pulamos o 4 e vamos direto para o 5
+    </p>
+
+    <code>
+      <pre>
+        listaDeCompras[5] = "biscoito"
+        console.log(listaDeCompras)
+        // retorna → <i>["suco", "chocolate", "açúcar", "pipoca", undefined, "biscoito"]</i>
+
+
+        typeof listaDeCompras[4]
+        // retorna → <i>"undefined"</i>
+      </pre>
+    </code>
+
+    <p>
+      Notasse que agora que adicionamos algo no índice de número 5, o índice 4
+      foi criado e recebeu um valor indefinido, justamente porque não passamos
+      nada para ele, e só existe um índice 5, se tiver um de número 4.
+    </p>
+
     <hr />
+
+    <h2>Como saber o tipo de um valor?</h2>
+
+    <p>
+      Existem algumas formas de se descobrir qual o tipo de um valor, a mais
+      conhecida e a que funciona para a maior parte dos elementos javascript é o
+      "typeof"
+    </p>
+
+    <h3>typeof</h3>
+
+    <p>
+      O <i>typeof</i> nos retornar qual o tipo daquele determinado valor e para
+      utilizá-lo, podemos fazer assim:
+    </p>
+
+    <code>
+      <pre>
+        const myName = "Everson"
+        console.log(typeof myName)
+        // Ele irá retornar → <i>"string"</i>
+      </pre>
+    </code>
+
+    <p>Outro exemplo:</p>
+
+    <code>
+      <pre>
+        const idade = 23
+        console.log(typeof idade)
+        // Ele irá retornar → <i>"number"</i>
+      </pre>
+    </code>
+
+    <p>
+      O <b>typeof</b> vai nos informar qual o tipo correto de <b>STRING</b>,
+      <b>NUMBER</b>, <b>BOOLEAN</b> e <b>UNDEFINED</b>, mas ele não irá
+      funcionar corretamente se tentarmos verificar qual o tipo de um objeto,
+      ele nos retorna <i>"object"</i>, o que faz sentido. Mas não funciona bem
+      para verificar o tipo de um array, ele também nos retorna <i>"object"</i>,
+      e faz a mesma coisa com "null".
+    </p>
+
+    <code>
+      <pre>
+        const lista = []
+        console.log(typeof lista)
+        // Ele irá retornar → <i>"object"</i>
+      </pre>
+    </code>
+
+    <code>
+      <pre>
+        const meuObjeto = {}
+        console.log(typeof meuObjeto)
+        // Ele irá retornar → <i>"object"</i>
+      </pre>
+    </code>
+
+    <code>
+      <pre>
+        const dinheiro = null
+        console.log(typeof dinheiro)
+        // Ele irá retornar → <i>"object"</i>
+      </pre>
+    </code>
+
+    <hr />
+
+    <h2>Como saber quando um elemento é um Array? e quando é Object?</h2>
+
+    <h3>Array.isArray()</h3>
+
+    <p>
+      O javascript possui uma função nativa que faz a verificação se um
+      determinado valor inserido entre os parênteses é, ou não, um array. Ele
+      nos retorna um valor <b>true</b> ou <b>false</b>, e com base nisso nós
+      conseguimos saber se um determinado valor é um Array ou não.
+    </p>
+
+    <code>
+      <pre>
+        const lista = []
+        Array.isArray(lista)
+        // Ele irá retornar → <i>true</i>
+      </pre>
+    </code>
+
+    <code>
+      <pre>
+        const meuObjeto = {}
+        Array.isArray(lista)
+        // Ele irá retornar → <i>false</i>
+      </pre>
+    </code>
+
+    <h3><i>meuObjeto</i> instanceof Object</h3>
+
+    <p>
+      Para saber se um determinado valor é de fato um típico objeto javascript,
+      utilizamos o método "instanceof" que faz a verificação se aquele
+      determinado objeto que estamos querendo descobrir é ou não um objeto
+      normal, com propriedades e valor. Assim como no método de verificação do
+      Array, ele nos retorna um valor <b>true</b> ou <b>false</b>.
+    </p>
+
+    <code>
+      <pre>
+        const meuObjeto = {name: "everson", age: 23}
+        meuObjeto instanceof Object
+        // Ele irá retornar → <i>true</i>
+      </pre>
+    </code>
+
+    <code>
+      <pre>
+        const minhaLista = ["uva", "laranja"]
+        minhaLista instanceof Object
+        // Ele irá retornar → <i>false</i>
+      </pre>
+    </code>
+
+    <p>
+      Note que se tivéssemos feito a verificação do "meuObjeto" e da
+      "minhaLista" com o typeof, ele nos teria dito que ambos são object, o que
+      de fato não é.
+    </p>
 
     <script>
       const Comidinha = ["sushi", "sanduiche", "pizza"];
