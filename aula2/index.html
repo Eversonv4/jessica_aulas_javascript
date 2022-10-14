@@ -275,7 +275,11 @@
 
     <code>
       <pre>
-        const listaDeCompras = ["leite", "chocolate", "açúcar"]
+        const listaDeCompras = [
+          "leite", 
+          "chocolate", 
+          "açúcar"
+        ]
         listaDeCompras[0]
         // retorna → <i>"leite"</i>
 
@@ -313,7 +317,8 @@
       <pre>
         listaDeCompras[3] = "pipoca"
         console.log(listaDeCompras)
-        // retorna → <i>["suco", "chocolate", "açúcar", "pipoca"]</i>
+        // retorna → 
+        <i>["suco", "chocolate", "açúcar", "pipoca"]</i>
       </pre>
     </code>
 
@@ -327,7 +332,15 @@
       <pre>
         listaDeCompras[5] = "biscoito"
         console.log(listaDeCompras)
-        // retorna → <i>["suco", "chocolate", "açúcar", "pipoca", undefined, "biscoito"]</i>
+        // retorna → 
+        <i>[
+          "suco", 
+          "chocolate", 
+          "açúcar", 
+          "pipoca", 
+          undefined, 
+          "biscoito"
+          ]</i>
 
 
         typeof listaDeCompras[4]
